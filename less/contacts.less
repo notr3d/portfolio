@@ -1,0 +1,36 @@
+.contacts {
+  padding: 20px 0;
+  .lcw;
+  color:@grey;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  flex-wrap:wrap;
+  justify-content: space-between;
+  h2 {
+    width:100%;
+    margin: 0;
+    margin-bottom: 20px;
+    font-weight: normal;
+    text-transform: uppercase;
+    font-size: 16px;
+  }
+  &__item {
+    width: 25%;
+    &:not(:first-of-type) {
+      text-align: center;
+    }
+    span {
+      font-weight: bold;
+    }
+    a {
+      color: @grey;
+      text-decoration: none;
+      &:hover {
+        color: darken(@grey, 20%);
+      }
+    }
+  }
+}
