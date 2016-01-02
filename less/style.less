@@ -1,6 +1,7 @@
 @dark-grey:#343234;
 @grey:#999999;
 @light-grey:#f5f3f5;
+@green:#16a316;
 
 html {
   background: @light-grey;
@@ -18,7 +19,7 @@ body {
 .page-nav {
   max-width:1280px;
   margin: 0 auto;
-  padding: 10px;
+  padding: 15px;
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flex;
@@ -29,18 +30,68 @@ body {
     color:@grey;
     text-decoration: none;
     display: inline-block;
-    padding: 10px;
+    padding: 5px 10px;
+    &:not(:last-child) {
+      border-right:1px solid @grey;
+    }
   }
 }
 
 .showcase {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  padding: 10px;
   &__item {
-    display: inline-block;
+    margin: 5px;
+    padding: 20px;
+    box-sizing: border-box;
     width: 33%;
     height: 400px;
     background: white;
-    border-radius: 2px;
-    margin: 20px;
-    box-shadow:0px 2px 5px 0px grey;
+    box-shadow:0px 1px 1px 0px grey;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    h2 {
+      text-transform: uppercase;
+      margin: 0;
+      padding-bottom: 20px;
+      position: relative;
+      &::before {
+        content: '';
+        display: block;
+        width: 50px;
+        height: 2px;
+        background-color: @grey;
+        position: absolute;
+        top: 100%;
+        left: 0;
+      }
+    }
+    a {
+      margin-top: auto;
+      display: inline-block;
+      color: #fff;
+      text-decoration: none;
+      background-color: @grey;
+      text-align: center;
+      text-transform: uppercase;
+      font-weight: bold;
+      border-radius: 5px;
+      padding: 10px;
+    }
   }
+  &__container {
+    height: 400px;
+    background: @light-grey url("img/Без имени-2.jpg") no-repeat 50% 50%;
+    background-size:cover;
+    margin: 30px 0;
+    }
 }
