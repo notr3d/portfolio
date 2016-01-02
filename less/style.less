@@ -1,7 +1,19 @@
+@mobile: ~ "(max-width: 767px)";
+@tablet: ~ "(min-width: 768px)";
+@desktop: ~ "(min-width: 1280px)";
+
 @dark-grey:#343234;
 @grey:#999999;
 @light-grey:#f5f3f5;
-@green:#16a316;
+
+@import "page-nav.less";
+@import "about.less";
+@import "showcase.less";
+@import "contacts.less";
+
+* {
+  transition:all .1s;
+}
 
 html {
   background: @light-grey;
@@ -12,86 +24,18 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
-.page-header {
-  background: linear-gradient(@dark-grey, lighten(@dark-grey, 5%));
-}
-
-.page-nav {
+.lcw {
   max-width:1280px;
   margin: 0 auto;
-  padding: 15px;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
-  display: flex;
-  justify-content: flex-end;
-  a {
-    color:@grey;
-    text-decoration: none;
-    display: inline-block;
-    padding: 5px 10px;
-    &:not(:last-child) {
-      border-right:1px solid @grey;
-    }
-  }
 }
 
-.showcase {
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
-  display: flex;
-  padding: 10px;
-  &__item {
-    margin: 5px;
-    padding: 20px;
-    box-sizing: border-box;
-    width: 33%;
-    height: 400px;
-    background: white;
-    box-shadow:0px 1px 1px 0px grey;
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flex;
-    display: -o-flex;
-    display: flex;
-    flex-direction: column;
-    border-radius: 5px;
-    h2 {
-      text-transform: uppercase;
-      margin: 0;
-      padding-bottom: 20px;
-      position: relative;
-      &::before {
-        content: '';
-        display: block;
-        width: 50px;
-        height: 2px;
-        background-color: @grey;
-        position: absolute;
-        top: 100%;
-        left: 0;
-      }
-    }
-    a {
-      margin-top: auto;
-      display: inline-block;
-      color: #fff;
-      text-decoration: none;
-      background-color: @grey;
-      text-align: center;
-      text-transform: uppercase;
-      font-weight: bold;
-      border-radius: 5px;
-      padding: 10px;
-    }
-  }
-  &__container {
-    height: 400px;
-    background: @light-grey url("img/Без имени-2.jpg") no-repeat 50% 50%;
-    background-size:cover;
-    margin: 30px 0;
-    }
+.page-header {
+  background: linear-gradient(@dark-grey, lighten(@dark-grey, 5%));
+  position: fixed;
+  width: 100%;
+}
+
+.page-footer {
+  background-color: white;
+  border-top: 1px solid @grey;
 }

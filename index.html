@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>portfolio</title>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -11,20 +12,83 @@
     <header class="page-header">
       <nav class="page-nav">        
         <div class="page-logo"></div>
-        <a href="#">Обо мне</a>
-        <a href="#">Мои Работы</a>
-        <a href="#">Контакты</a>
+        <a href="#about" class="page-nav__link">Обо мне</a>
+        <a href="#showcase" class="page-nav__link">Мои Работы</a>
+        <a href="#contacts" class="page-nav__link">Контакты</a>
       </nav>
     </header>
     <main class="page-main">
-      <article class="showcase">
-        <div class="showcase__item">
-          <h2>pink</h2>
-          <div class="showcase__container"></div>
-          <a href="http://notr3d.github.io/79358-pink/">pink</a>
+      <article class="about" id="about">
+        <h1>Привет!</h1>
+        <p>Меня зовут Александр, и я — начинающий веб-разработчик. В данный момент я сосредочен на верстке сайтов. Ниже Вы можете увидеть мои работы. Немного обо мне:</p>
+        <table>
+          <tr>
+            <th>ФИО:</th>
+            <td>Некрасов Александр Юрьевич</td>
+          </tr>
+          <tr>
+            <th>Возраст:</th>
+            <td>21.08.1990</td>
+          </tr>
+          <tr>
+            <th>Языки:</th>
+            <td>Русский, английский</td>
+          </tr>
+          <tr>
+            <th>Специализация:</th>
+            <td>HTML-верстка веб-страниц</td>
+          </tr>
+          <tr>
+            <th>Навыки:</th>
+            <td>
+              <ul>
+                <li>HTML, HTML5</li>
+                <li>CSS, CSS3, LESS</li>
+                <li>JavaScript, jQuery</li>
+                <li>Adobe Photoshop, Grunt</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <th>Опыт:</th>
+            <td>Версткой занимаюсь с середины 2014 года по настоящее время</td>
+          </tr>
+          <tr>
+            <th>Образование:</th>
+            <td>Математик-программист, МГППУ 2008-2013</td>
+          </tr>          
+        </table>
+      </article>
+      <article class="showcase" id="showcase">
+        <div class="showcase__item"> 
+          <img src="img/pink.jpg" class="showcase__img" width="280" height="210" alt="pink">
+          <a href="http://notr3d.github.io/79358-pink" target="blank" class="showcase__link">
+            <h2 class="showcase__header">pink</h2>
+          </a>
+        </div>
+        <div class="showcase__item"> 
+          <img src="img/sedona.jpg" class="showcase__img" width="280" height="210" alt="pink">
+          <a href="http://notr3d.github.io/sedona" target="blank" class="showcase__link">
+            <h2 class="showcase__header">sedona</h2>
+          </a>
         </div>
       </article>
     </main>
+    <footer class="page-footer">
+      <section class="contacts" id="contacts">
+        <h2>Контактная информация:</h2>
+        <div class="contacts__item"><span>Телефон: </span>8 (925) 069-93-98</div>
+        <div class="contacts__item">
+          <a href="mailto:lxmrrr@gmail.com">email</a>
+        </div>
+        <div class="contacts__item">
+          <a href="skype:doubloon3?chat">skype</a>
+        </div>
+        <div class="contacts__item">
+          <a href="https://vk.com/id271939739">vk</a>
+        </div>       
+      </section>
+    </footer>
   </div>
 </body>
 </html>

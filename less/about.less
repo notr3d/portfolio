@@ -1,0 +1,44 @@
+.about {
+  .lcw;
+  padding: 40px 60px;
+  h1 {
+    font-family: 'Lobster', cursive;
+    font-size: 30px;
+  }
+  p {
+    font-size: 16px;
+    text-align: justify;
+    
+  }
+  table {
+    th {
+      text-align: right;
+      vertical-align: top;
+      color: darken(@grey, 40%);
+      padding: 10px 5px;
+    }
+    td {
+      color: darken(@grey, 20%);
+      padding: 10px 5px;
+      ul {
+        margin: 0;
+        list-style:none;
+        li {
+          position: relative;
+          &::before {
+            content: '';
+            display: block;
+            width: 8px;
+            height: 4px;
+            border-left: 2px solid @grey;
+            border-bottom: 2px solid @grey;
+            transform:rotate(-45deg);
+            position: absolute;
+            top: 7px;
+            left: -20px;
+          }
+        }
+      }
+    }
+  }
+}
