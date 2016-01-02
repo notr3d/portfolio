@@ -1,7 +1,16 @@
+@mobile: ~ "(max-width: 767px)";
+@tablet: ~ "(min-width: 768px)";
+@desktop: ~ "(min-width: 1280px)";
+
 @dark-grey:#343234;
 @grey:#999999;
 @light-grey:#f5f3f5;
-@green:#16a316;
+
+@import "about.less";
+
+* {
+  transition:all .1s;
+}
 
 html {
   background: @light-grey;
@@ -12,13 +21,16 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
+.lcw {
+  max-width:1280px;
+  margin: 0 auto;
+}
 .page-header {
   background: linear-gradient(@dark-grey, lighten(@dark-grey, 5%));
 }
 
 .page-nav {
-  max-width:1280px;
-  margin: 0 auto;
+  .lcw;
   padding: 15px;
   display: -webkit-flex;
   display: -moz-flex;
@@ -26,11 +38,14 @@ body {
   display: -o-flex;
   display: flex;
   justify-content: flex-end;
-  a {
+  &__link {
     color:@grey;
     text-decoration: none;
     display: inline-block;
-    padding: 5px 10px;
+    padding: 5px 8px;
+    &:hover {
+      color:white;
+    }
     &:not(:last-child) {
       border-right:1px solid @grey;
     }
@@ -38,60 +53,59 @@ body {
 }
 
 .showcase {
+  .lcw;
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flex;
   display: -o-flex;
   display: flex;
-  padding: 10px;
+  flex-wrap: wrap;
+  padding: 5px;
+  justify-content: center;
   &__item {
+    background-color: #fff;
+    box-shadow: 0px 1px 1px 0px @grey;
+    border-radius: 1px;
+    padding: 10px;
+    height: 210px;
+    position: relative;
     margin: 5px;
+  }
+  &__link {
+    display: block;
     padding: 20px;
     box-sizing: border-box;
-    width: 33%;
-    height: 400px;
-    background: white;
-    box-shadow:0px 1px 1px 0px grey;
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flex;
-    display: -o-flex;
-    display: flex;
-    flex-direction: column;
-    border-radius: 5px;
-    h2 {
-      text-transform: uppercase;
-      margin: 0;
-      padding-bottom: 20px;
-      position: relative;
-      &::before {
-        content: '';
-        display: block;
-        width: 50px;
-        height: 2px;
-        background-color: @grey;
-        position: absolute;
-        top: 100%;
-        left: 0;
-      }
-    }
-    a {
-      margin-top: auto;
-      display: inline-block;
-      color: #fff;
-      text-decoration: none;
-      background-color: @grey;
-      text-align: center;
-      text-transform: uppercase;
-      font-weight: bold;
-      border-radius: 5px;
-      padding: 10px;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: #fff;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    
+    text-decoration: none;
+    &:hover {
+      opacity: .95;
     }
   }
-  &__container {
-    height: 400px;
-    background: @light-grey url("img/Без имени-2.jpg") no-repeat 50% 50%;
-    background-size:cover;
-    margin: 30px 0;
-    }
+  &__header {
+    text-transform: uppercase;
+    margin: 0;
+    color: @dark-grey;
+    font-weight: normal;
+    position: relative;
+    /*&::before {
+      content: '';
+      display: block;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: @grey;
+      position: absolute;
+      top: 120%;
+      box-shadow: 
+        20px 0 0 0,
+        40px 0 0 0;
+    }*/
+  }
 }
