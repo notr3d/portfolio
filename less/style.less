@@ -1,15 +1,29 @@
-@mobile: ~ "(max-width: 767px)";
+/*@mobile: ~ "(max-width: 767px)";
 @tablet: ~ "(min-width: 768px)";
-@desktop: ~ "(min-width: 1280px)";
+@desktop: ~ "(min-width: 1280px)";*/
 
-@dark-grey:#343234;
+@dark-grey:#303030;
 @grey:#999999;
 @light-grey:#f5f3f5;
+
+@green:#60d4d4;
+@red:#e85d4e;
+@blue:#6088d4;
+
+@font-face {
+  font-family: Oswald;
+  src: url("font/Oswald/Oswald-Light.ttf");
+}
 
 @font-face {
   font-family: BebasNeue;
   src: url("font/BebasNeue Regular.ttf");
 }
+@font-face {
+  font-family: Lekton;
+  src: url("font/Lekton/Lekton-Regular.ttf");
+}
+
 
 @import "page-nav.less";
 @import "about.less";
@@ -22,8 +36,8 @@
 
 body {
   margin: 0;
-  font-family: 'Open Sans', sans-serif;
-  background-color: @light-grey;
+  font-family: Oswald;
+  //background-color: @light-grey;
   background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAMAAAApB0NrAAAABlBMVEX///+pqalTpKl9AAAAAnRSTlMAGovxNEIAAAAdSURBVDjLY2AAAUaG4UYxDDsfjfp91O+jfqfE7wCzpQCw/dq+qQAAAABJRU5ErkJggg==");
 }
 
@@ -33,11 +47,23 @@ body {
 }
 
 .page-header {
-  background: @dark-grey;
-  position: fixed;
-  width: 100%;
+  text-align: center;
+  height: 100vh;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  &__header {
+    font-weight: lighter;
+    text-transform: uppercase;
+    font-family: Oswald;
+    letter-spacing: -1px;
+  }
 }
 
 .page-footer {
-  background-color: @dark-grey;
+  background-color: black;
 }
