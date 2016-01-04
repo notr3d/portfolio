@@ -6,22 +6,25 @@
 @grey:#999999;
 @light-grey:#f5f3f5;
 
+@font-face {
+  font-family: BebasNeue;
+  src: url("font/BebasNeue Regular.ttf");
+}
+
 @import "page-nav.less";
 @import "about.less";
 @import "showcase.less";
 @import "contacts.less";
 
 * {
-  transition:all .1s;
-}
-
-html {
-  background: @light-grey;
+  transition:all .2s;
 }
 
 body {
   margin: 0;
   font-family: 'Open Sans', sans-serif;
+  background-color: @light-grey;
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAMAAAApB0NrAAAABlBMVEX///+pqalTpKl9AAAAAnRSTlMAGovxNEIAAAAdSURBVDjLY2AAAUaG4UYxDDsfjfp91O+jfqfE7wCzpQCw/dq+qQAAAABJRU5ErkJggg==");
 }
 
 .lcw {
@@ -30,12 +33,11 @@ body {
 }
 
 .page-header {
-  background: linear-gradient(@dark-grey, lighten(@dark-grey, 5%));
+  background: @dark-grey;
   position: fixed;
   width: 100%;
 }
 
 .page-footer {
-  background-color: white;
-  border-top: 1px solid @grey;
+  background-color: @dark-grey;
 }
