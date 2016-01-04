@@ -1,36 +1,52 @@
 .about {
   .lcw;
-  padding: 80px 0 20px;
-  p {
-    font-size: 16px;
-    text-align: justify;
+  height: 100vh;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  &__text {
+    font-size: 22px;
+    text-align: center;
+    width: 400px;
+    margin: 0 auto;
+    letter-spacing: 1px;
+    word-spacing: 5px;
+    line-height: 35px;
+    margin-bottom: 40px;
   }
   table {
+    margin: 0 auto;
     th {
+      width: 470px;
       text-align: right;
       vertical-align: top;
       color: darken(@grey, 40%);
       padding: 10px 5px;
     }
     td {
+      width: 470px;
       color: darken(@grey, 20%);
       padding: 10px 5px;
       ul {
         margin: 0;
         list-style:none;
+        padding-left: 15px;
         li {
           position: relative;
+          margin: 5px 0;
           &::before {
             content: '';
             display: block;
-            width: 8px;
-            height: 4px;
-            border-left: 2px solid @grey;
-            border-bottom: 2px solid @grey;
-            transform:rotate(-45deg);
+            width: 5px;
+            height: 20px;
             position: absolute;
-            top: 7px;
-            left: -20px;
+            bottom: 0;
+            left: -15px;
+            background: @green;
           }
         }
       }
