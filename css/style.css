@@ -112,7 +112,7 @@
   position: absolute;
   height: 100%;
   width: 100%;
-  background: rgba(0, 0, 0, 0.75) url(img/zoom.svg) no-repeat center;
+  background: rgba(0, 0, 0, 0.75) url(../img/zoom.svg) no-repeat center;
   top: 0;
   left: 0;
   opacity: 0;
@@ -130,28 +130,58 @@
   letter-spacing: 5px;
 }
 .contacts {
-  padding: 20px 0;
   max-width: 1280px;
   margin: 0 auto;
   color: black;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 .contacts__phone {
   font-size: 60px;
   text-align: center;
-  display: inline-block;
   letter-spacing: -3px;
   padding: 20px;
+  flex-basis: 100%;
 }
 .contacts__email {
-  display: inline-block;
   text-align: center;
   font-size: 60px;
   text-decoration: none;
   padding: 20px 40px;
   color: black;
   border: 5px solid black;
-  margin: 40px auto 0;
+  margin: 40px 200px 0;
   letter-spacing: -1px;
+  flex-basis: 100%;
+}
+.contacts__email:hover {
+  color: #fff;
+  background-color: #000;
+}
+.contacts .vk {
+  padding: 10px 40px;
+  color: black;
+  text-decoration: none;
+  font-size: 20px;
+}
+.contacts .vk:hover {
+  color: #fff;
+  background-color: #000;
+}
+.contacts .skype {
+  padding: 10px 40px;
+  color: black;
+  text-decoration: none;
+  font-size: 20px;
+}
+.contacts .skype:hover {
+  color: #fff;
+  background-color: #000;
 }
 * {
   transition: all .3s;

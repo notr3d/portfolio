@@ -2,7 +2,7 @@ $(document).ready(function() {
   $('#fullpage').fullpage({
     //scrollBar:true,
     scrollingSpeed:300,
-    anchors:['1', '2', '3'],
+    anchors:['1', '2', '3', '4'],
     paddingTop:0,
     navigation:true,
   });
