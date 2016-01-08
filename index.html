@@ -3,104 +3,116 @@
 <head>
   <meta charset="UTF-8">
   <title>portfolio</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css"/>
+  <link rel="stylesheet" type="text/css" href="css/slick.css"/>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <div class="page-wrapper">
-    <header class="page-header">
-      <h1 class="page-header__header">Portfolio</h1>
-      <nav class="page-nav">
-        <a href="#about" class="page-nav__link  page-nav__link--about">Обо мне</a>
-        <a href="#showcase" class="page-nav__link  page-nav__link--showcase">Мои работы</a>
-        <a href="#contacts" class="page-nav__link  page-nav__link--contacts">Контакты</a>
-      </nav>
-    </header>
-    <main class="page-main">
-      <article class="about" id="about">
-        <p class="about__text">Меня зовут Александр, и я — начинающий веб-разработчик. В данный момент я сосредочен на верстке сайтов. Ниже Вы можете увидеть мои работы. Немного обо мне:</p>
-        <table>
-          <tr>
-            <th>ФИО:</th>
-            <td>Некрасов Александр Юрьевич</td>
-          </tr>
-          <tr>
-            <th>Возраст:</th>
-            <td>21.08.1990</td>
-          </tr>
-          <tr>
-            <th>Языки:</th>
-            <td>Русский, английский</td>
-          </tr>
-          <tr>
-            <th>Специализация:</th>
-            <td>HTML-верстка</td>
-          </tr>
-          <tr>
-            <th>Навыки:</th>
-            <td>
-              <ul>
-                <li>HTML, HTML5</li>
-                <li>CSS, CSS3, LESS</li>
-                <li>JavaScript, jQuery</li>
-                <li>Adobe Photoshop, Grunt, БЭМ</li>
-              </ul>
-            </td>
-          </tr>
-          <tr>
-            <th>Опыт:</th>
-            <td>Версткой занимаюсь с середины 2014 года по настоящее время</td>
-          </tr>
-          <tr>
-            <th>Образование:</th>
-            <td>Математик-программист, МГППУ 2008-2013</td>
-          </tr>          
-        </table>
-      </article>
-      <article class="showcase" id="showcase">
-        <div class="showcase__item"> 
-          <img src="img/pink.jpg" class="showcase__img" width="280" height="210" alt="pink">
-          <a href="http://notr3d.github.io/79358-pink" target="blank" class="showcase__link">
-            <h2 class="showcase__header">pink</h2>
-          </a>
-        </div>
-        <div class="showcase__item"> 
-          <img src="img/sedona.jpg" class="showcase__img" width="280" height="210" alt="pink">
-          <a href="http://notr3d.github.io/sedona" target="blank" class="showcase__link">
-            <h2 class="showcase__header">sedona</h2>
-          </a>
-        </div>
-        <div class="showcase__item"> 
-          <img src="img/etf.jpg" class="showcase__img" width="280" height="210" alt="pink">
-          <a href="http://notr3d.github.io/etf" target="blank" class="showcase__link">
-            <h2 class="showcase__header">etf</h2>
-          </a>
-        </div>        
-        <div class="showcase__item"> 
-          <img src="img/folio.jpg" class="showcase__img" width="280" height="210" alt="pink">
-          <a href="http://notr3d.github.io/folio" target="blank" class="showcase__link">
-            <h2 class="showcase__header">folio</h2>
-          </a>
-        </div>
-        <div class="showcase__item"> 
-          <img src="img/corporate-blue.jpg" class="showcase__img" width="280" height="210" alt="pink">
-          <a href="http://notr3d.github.io/corporate-blue/" target="blank" class="showcase__link">
-            <h2 class="showcase__header">corporate blue</h2>
-          </a>
-        </div>        
-      </article>
-    </main>
-    <footer class="page-footer">
-      <section class="contacts" id="contacts">
-        <div class="contacts__phone">+7 (925) 069-93-98</div>
-        <a href="mailto:lxmrrr@gmail.com" class="contacts__email">lxmrrr@gmail.com</a>
-        <!--<div class="contacts__item">
-          <a href="skype:doubloon3?chat">skype</a>
-        </div>
-        <div class="contacts__item">
-          <a href="https://vk.com/id271939739">vk</a>
-        </div> -->      
-      </section>
-    </footer>
+    <div id="fullpage">
+      <div class="section">
+        <header class="page-header">
+          <h1 class="page-header__header">Portfolio</h1>
+          <nav class="page-nav">
+            <a href="#2" class="page-nav__link  page-nav__link--about">Обо мне</a>
+            <a href="#3" class="page-nav__link  page-nav__link--showcase">Мои работы</a>
+            <a href="#3" class="page-nav__link  page-nav__link--contacts">Контакты</a>
+          </nav>
+        </header>
+      </div>
+      <div class="section" data-anchor="2">
+        <article class="about">
+          <p class="about__text">Меня зовут Александр, и я — начинающий веб-разработчик. В данный момент я сосредочен на верстке сайтов. Ниже Вы можете увидеть мои работы. Немного обо мне:</p>
+          <table>
+            <tr>
+              <th>ФИО:</th>
+              <td>Некрасов Александр Юрьевич</td>
+            </tr>
+            <tr>
+              <th>Возраст:</th>
+              <td>21.08.1990</td>
+            </tr>
+            <tr>
+              <th>Языки:</th>
+              <td>Русский, английский</td>
+            </tr>
+            <tr>
+              <th>Специализация:</th>
+              <td>HTML-верстка</td>
+            </tr>
+            <tr>
+              <th>Навыки:</th>
+              <td>
+                <ul>
+                  <li>HTML, HTML5</li>
+                  <li>CSS, CSS3, LESS</li>
+                  <li>JavaScript, jQuery</li>
+                  <li>Adobe Photoshop, Grunt, БЭМ</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <th>Опыт:</th>
+              <td>Версткой занимаюсь с середины 2014 года по настоящее время</td>
+            </tr>
+            <tr>
+              <th>Образование:</th>
+              <td>Математик-программист, МГППУ 2008-2013</td>
+            </tr>          
+          </table>
+        </article>
+      </div>
+      <div class="section" data-anchor="3">
+        <article class="showcase">
+          <div class="showcase__item"> 
+            <img src="img/pink.jpg" class="showcase__img" width="280" height="210" alt="pink">
+            <a href="http://notr3d.github.io/79358-pink" target="blank" class="showcase__link">
+              <h2 class="showcase__header">pink</h2>
+            </a>
+          </div>
+          <div class="showcase__item"> 
+            <img src="img/sedona.jpg" class="showcase__img" width="280" height="210" alt="pink">
+            <a href="http://notr3d.github.io/sedona" target="blank" class="showcase__link">
+              <h2 class="showcase__header">sedona</h2>
+            </a>
+          </div>
+          <div class="showcase__item"> 
+            <img src="img/etf.jpg" class="showcase__img" width="280" height="210" alt="pink">
+            <a href="http://notr3d.github.io/etf" target="blank" class="showcase__link">
+              <h2 class="showcase__header">etf</h2>
+            </a>
+          </div>        
+          <div class="showcase__item"> 
+            <img src="img/folio.jpg" class="showcase__img" width="280" height="210" alt="pink">
+            <a href="http://notr3d.github.io/folio" target="blank" class="showcase__link">
+              <h2 class="showcase__header">folio</h2>
+            </a>
+          </div>
+          <div class="showcase__item"> 
+            <img src="img/corporate-blue.jpg" class="showcase__img" width="280" height="210" alt="pink">
+            <a href="http://notr3d.github.io/corporate-blue/" target="blank" class="showcase__link">
+              <h2 class="showcase__header">corporate blue</h2>
+            </a>
+          </div>        
+        </article>
+        <footer class="page-footer">
+          <section class="contacts">
+            <a href="mailto:lxmrrr@gmail.com" class="contacts__email">lxmrrr@gmail.com</a>
+            <div class="contacts__phone">+7 (925) 069-93-98</div>
+            <!--<div class="contacts__item">
+              <a href="skype:doubloon3?chat">skype</a>
+            </div>
+            <div class="contacts__item">
+              <a href="https://vk.com/id271939739">vk</a>
+            </div> -->      
+          </section>
+        </footer>
+      </div>
+    </div>    
   </div>
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript" src="js/jquery.fullPage.js"></script>
+  <script type="text/javascript" src="js/slick.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>

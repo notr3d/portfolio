@@ -1,27 +1,19 @@
-/*@mobile: ~ "(max-width: 767px)";
-@tablet: ~ "(min-width: 768px)";
-@desktop: ~ "(min-width: 1280px)";*/
 @font-face {
   font-family: Oswald;
-  src: url("font/Oswald/Oswald-Light.ttf");
+  src: url("../font/Oswald/Oswald-Light.ttf");
 }
-@font-face {
+/*@font-face {
   font-family: BebasNeue;
-  src: url("font/BebasNeue Regular.ttf");
+  src: url("../font/BebasNeue Regular.ttf");
 }
+
 @font-face {
   font-family: Lekton;
-  src: url("font/Lekton/Lekton-Regular.ttf");
-}
+  src: url("../font/Lekton/Lekton-Regular.ttf");
+}*/
 .page-nav {
   max-width: 1280px;
   margin: 0 auto;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
-  display: flex;
-  justify-content: center;
 }
 .page-nav__link {
   font-family: Oswald;
@@ -47,14 +39,6 @@
 .about {
   max-width: 1280px;
   margin: 0 auto;
-  height: 100vh;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
 .about__text {
   font-size: 22px;
@@ -149,38 +133,28 @@
   padding: 20px 0;
   max-width: 1280px;
   margin: 0 auto;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  color: white;
+  color: black;
 }
 .contacts__phone {
   font-size: 60px;
   text-align: center;
+  display: inline-block;
   letter-spacing: -3px;
+  padding: 20px;
 }
 .contacts__email {
-  display: block;
+  display: inline-block;
   text-align: center;
   font-size: 60px;
   text-decoration: none;
   padding: 20px 40px;
-  color: white;
-  border: 5px solid white;
+  color: black;
+  border: 5px solid black;
   margin: 40px auto 0;
   letter-spacing: -1px;
 }
-.contacts__email:hover {
-  background-color: white;
-  color: black;
-  border-color: black;
-}
 * {
-  transition: all .2s;
+  transition: all .3s;
 }
 body {
   margin: 0;
@@ -193,14 +167,6 @@ body {
 }
 .page-header {
   text-align: center;
-  height: 100vh;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
 .page-header__header {
   font-weight: lighter;
@@ -209,5 +175,5 @@ body {
   letter-spacing: -1px;
 }
 .page-footer {
-  background-color: black;
+  width: 100%;
 }
