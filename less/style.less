@@ -1,6 +1,6 @@
-/*@mobile: ~ "(max-width: 767px)";
+@mobile: ~ "(max-width: 767px)";
 @tablet: ~ "(min-width: 768px)";
-@desktop: ~ "(min-width: 1280px)";*/
+@desktop: ~ "(min-width: 1280px)";
 
 @dark-grey:#303030;
 @grey:#999999;
@@ -12,18 +12,18 @@
 
 @font-face {
   font-family: Oswald;
-  src: url("font/Oswald/Oswald-Light.ttf");
+  src: url("../font/Oswald/Oswald-Light.ttf");
 }
 
-@font-face {
+/*@font-face {
   font-family: BebasNeue;
-  src: url("font/BebasNeue Regular.ttf");
+  src: url("../font/BebasNeue Regular.ttf");
 }
+
 @font-face {
   font-family: Lekton;
-  src: url("font/Lekton/Lekton-Regular.ttf");
-}
-
+  src: url("../font/Lekton/Lekton-Regular.ttf");
+}*/
 
 @import "page-nav.less";
 @import "about.less";
@@ -31,13 +31,12 @@
 @import "contacts.less";
 
 * {
-  transition:all .2s;
+  transition:all .3s;
 }
 
 body {
   margin: 0;
   font-family: Oswald;
-  //background-color: @light-grey;
   background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAMAAAApB0NrAAAABlBMVEX///+pqalTpKl9AAAAAnRSTlMAGovxNEIAAAAdSURBVDjLY2AAAUaG4UYxDDsfjfp91O+jfqfE7wCzpQCw/dq+qQAAAABJRU5ErkJggg==");
 }
 
@@ -48,14 +47,6 @@ body {
 
 .page-header {
   text-align: center;
-  height: 100vh;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   &__header {
     font-weight: lighter;
     text-transform: uppercase;
@@ -65,5 +56,5 @@ body {
 }
 
 .page-footer {
-  background-color: black;
+  width: 100%;
 }
